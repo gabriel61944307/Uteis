@@ -1,8 +1,8 @@
 #include <stdio.h>
 
-int memoria[100];
+long long int memoria[100];
 
-int fibonacci(int n){
+long long int fibonacci(int n){
 	if(n == 0){
 		return 0;
 	}
@@ -14,7 +14,7 @@ int fibonacci(int n){
 			return memoria[n-1];
 		}
 		else{
-			int aux = fibonacci(n-1) + fibonacci(n-2);
+			long long int aux = fibonacci(n-1) + fibonacci(n-2);
 			memoria[n-1] = aux;
 			return aux;
 		}
@@ -32,7 +32,7 @@ int main(){
 	
 	while(n){
 		scanf("%d", &n);
-		printf("%d\n", fibonacci(n));	
+		printf("%lli\n", fibonacci(n));	
 	}
 	
 	return 0;
