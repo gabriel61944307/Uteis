@@ -14,7 +14,7 @@ int fibonacci(int n){
 			return memoria[n-1];
 		}
 		else{
-			int aux = fibonacci(n-1) + fibonacci(n-2);
+			int aux = fibonacci(n-2) + fibonacci(n-1);
 			memoria[n-1] = aux;
 			return aux;
 		}
